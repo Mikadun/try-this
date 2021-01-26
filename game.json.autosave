@@ -158,6 +158,51 @@
         "name": "NewObject-1-0.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/Player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\Player.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/TouchRadius.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\TouchRadius.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/ControllerPosition.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\ControllerPosition.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/ControllerCenter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\ControllerCenter.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/MouseDistanceCheck.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\MouseDistanceCheck.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -269,7 +314,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "PlayerIdle-1.png",
+                      "image": "images\\Player.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -308,7 +353,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Round joystick (outer, plain).png",
+                      "image": "images\\TouchRadius.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -352,7 +397,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Rounded joystick (outer, plain).png",
+                      "image": "images\\ControllerPosition.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -391,7 +436,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1.png",
+                      "image": "images\\ControllerCenter.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -430,7 +475,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1-0.png",
+                      "image": "images\\MouseDistanceCheck.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",

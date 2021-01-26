@@ -158,6 +158,51 @@
         "name": "NewObject-1-0.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/Player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\Player.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/TouchRadius.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\TouchRadius.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/ControllerPosition.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\ControllerPosition.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/ControllerCenter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\ControllerCenter.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/MouseDistanceCheck.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\MouseDistanceCheck.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
