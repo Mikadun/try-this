@@ -18,8 +18,8 @@
     "version": "1.0.0",
     "name": "Try this",
     "author": "Antinaturals",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 1280,
+    "windowHeight": 720,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -108,12 +108,56 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "images/player-square.png",
+        "file": "images\\Player.png",
         "kind": "image",
         "metadata": "",
-        "name": "images\\player-square.png",
+        "name": "Player.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images\\TouchRadius.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "TouchRadius.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Flat Light/Round joystick (outer, plain).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images\\ControllerPosition.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ControllerPosition.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Shaded Dark/Rounded joystick (outer, plain).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images\\MouseDistanceCheck.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "MouseDistanceCheck.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images\\ControllerCenter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ControllerCenter.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
