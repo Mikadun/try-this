@@ -203,6 +203,15 @@
         "name": "images\\MouseDistanceCheck.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/EnemySquare.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\EnemySquare.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

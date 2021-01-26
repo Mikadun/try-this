@@ -24,7 +24,16 @@
     "windowMask": false,
     "zoomFactor": 0.468
   },
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "Enemies",
+      "objects": [
+        {
+          "name": "EnemySquare"
+        }
+      ]
+    }
+  ],
   "variables": [
     {
       "name": "ControllerAngle",
@@ -68,6 +77,22 @@
       "x": 120,
       "y": 600,
       "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "EnemySquare",
+      "persistentUuid": "4ac66b80-3fd3-48f8-9846-ec2dcc2770ac",
+      "width": 0,
+      "x": 767,
+      "y": 252,
+      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -282,9 +307,34 @@
           ]
         }
       ]
+    },
+    {
+      "height": 100,
+      "name": "EnemySquare",
+      "tags": "",
+      "texture": "images\\EnemySquare.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 100,
+      "variables": [],
+      "behaviors": []
     }
   ],
   "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Player controls",
+      "comment2": ""
+    },
     {
       "disabled": false,
       "folded": false,
@@ -836,6 +886,55 @@
           ]
         }
       ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Collisions",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Enemies",
+            "Player",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "Player"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ],
   "layers": [
@@ -862,7 +961,7 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 1702453580,
+      "ambientLightColorB": 1702453632,
       "ambientLightColorG": 8425424,
       "ambientLightColorR": 2,
       "followBaseLayerCamera": false,
