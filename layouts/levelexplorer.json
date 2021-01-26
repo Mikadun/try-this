@@ -101,7 +101,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "Player.png",
+                  "image": "PlayerIdle-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -140,7 +140,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "TouchRadius.png",
+                  "image": "Round joystick (outer, plain).png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -167,7 +167,12 @@
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -179,7 +184,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "ControllerPosition.png",
+                  "image": "Rounded joystick (outer, plain).png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -218,7 +223,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "ControllerCenter.png",
+                  "image": "NewObject-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -257,7 +262,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "MouseDistanceCheck.png",
+                  "image": "NewObject-1-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -386,6 +391,26 @@
             "10"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "ControllerCenter"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "MouseDistanceCheck"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -473,7 +498,122 @@
         {
           "type": {
             "inverted": false,
-            "value": "SourisBouton"
+            "value": "VarScene"
+          },
+          "parameters": [
+            "TouchInOut",
+            "=",
+            "2"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ControllerPosition",
+                "=",
+                "MouseX()",
+                "=",
+                "MouseY()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "ControllerPosition",
+                    "ControllerCenter",
+                    "60",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreAutour"
+                  },
+                  "parameters": [
+                    "ControllerPosition",
+                    "ControllerCenter",
+                    "60",
+                    "ControllerCenter.Angle()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "ControllerAngle",
+                    "=",
+                    "ControllerCenter.Angle()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MouseButtonReleased"
           },
           "parameters": [
             "",
@@ -491,9 +631,61 @@
           "parameters": [
             "ControllerPosition",
             "=",
-            "MouseX()",
+            "ControllerPosition.X()",
             "=",
-            "MouseY()"
+            "ControllerPosition.Y()"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Tween::AddObjectPositionTween"
+          },
+          "parameters": [
+            "ControllerPosition",
+            "Tween",
+            "\"BackToCenter\"",
+            "ControllerCenter.X()",
+            "ControllerCenter.Y()",
+            "\"easeOutQuad\"",
+            "700",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "TouchRadius",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "TouchInOut",
+            "=",
+            "0"
           ],
           "subInstructions": []
         }
@@ -506,14 +698,12 @@
           "conditions": [
             {
               "type": {
-                "inverted": true,
-                "value": "Distance"
+                "inverted": false,
+                "value": "SourisBouton"
               },
               "parameters": [
-                "ControllerPosition",
-                "ControllerCenter",
-                "60",
-                ""
+                "",
+                "Left"
               ],
               "subInstructions": []
             }
@@ -522,13 +712,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreAutour"
+                "value": "ModVarScene"
               },
               "parameters": [
-                "ControllerPosition",
-                "ControllerCenter",
-                "60",
-                "ControllerCenter.Angle()"
+                "TouchInOut",
+                "=",
+                "2"
               ],
               "subInstructions": []
             }
@@ -539,7 +728,19 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -547,14 +748,92 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "ControllerAngle",
+                "TouchInOut",
                 "=",
-                "ControllerCenter.Angle()"
+                "2"
               ],
               "subInstructions": []
             }
           ],
           "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "TouchRadius",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "TouchInOut",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "TouchInOut",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         }
       ]
     }
@@ -598,6 +877,10 @@
     {
       "name": "StayOnScreen",
       "type": "StayOnScreen::StayOnScreen"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }
