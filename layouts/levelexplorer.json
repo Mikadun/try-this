@@ -72,7 +72,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "..\\..\\..\\Downloads\\player-square.png",
+                  "image": "images\\player-square.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
