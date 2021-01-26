@@ -18,8 +18,8 @@
     "version": "1.0.0",
     "name": "Try this",
     "author": "Antinaturals",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 1280,
+    "windowHeight": 720,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -103,6 +103,59 @@
         "kind": "image",
         "metadata": "",
         "name": "..\\..\\..\\Downloads\\player-square.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerIdle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerIdle-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Round joystick (outer, plain).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Round joystick (outer, plain).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Flat Light/Round joystick (outer, plain).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Rounded joystick (outer, plain).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Rounded joystick (outer, plain).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Shaded Dark/Rounded joystick (outer, plain).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-0.png",
         "smoothed": true,
         "userAdded": false
       }

@@ -22,10 +22,23 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 1
+    "zoomFactor": 0.468
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "ControllerAngle",
+      "value": ""
+    },
+    {
+      "name": "ControllerSpeed",
+      "value": ""
+    },
+    {
+      "name": "TouchInOut",
+      "value": "0"
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -36,9 +49,25 @@
       "name": "Player",
       "persistentUuid": "93fc80e0-61fb-4d62-9f0b-74bab3d6ae2c",
       "width": 30,
-      "x": 400,
-      "y": 300,
+      "x": 488,
+      "y": 288,
       "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "UI",
+      "locked": false,
+      "name": "ControllerCenter",
+      "persistentUuid": "cc038e71-bcf0-4d25-876d-aeb5cef6403f",
+      "width": 0,
+      "x": 120,
+      "y": 600,
+      "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -72,7 +101,163 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "..\\..\\..\\Downloads\\player-square.png",
+                  "image": "PlayerIdle-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TouchRadius",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Round joystick (outer, plain).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 80,
+                    "y": 80
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ControllerPosition",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Rounded joystick (outer, plain).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 80,
+                    "y": 80
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ControllerCenter",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MouseDistanceCheck",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -98,17 +283,187 @@
     {
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Player",
-      "comment2": ""
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "ControllerPosition",
+            "ControllerCenter.X()",
+            "ControllerCenter.Y()",
+            "\"UI\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "TouchRadius",
+            "ControllerCenter.X()",
+            "ControllerCenter.Y()",
+            "\"UI\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeHeight"
+          },
+          "parameters": [
+            "ControllerPosition",
+            "=",
+            "80"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeWidth"
+          },
+          "parameters": [
+            "ControllerPosition",
+            "=",
+            "80"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "MouseDistanceCheck",
+            "MouseX()",
+            "MouseY()",
+            "\"UI\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeHeight"
+          },
+          "parameters": [
+            "MouseDistanceCheck",
+            "=",
+            "10"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeWidth"
+          },
+          "parameters": [
+            "MouseDistanceCheck",
+            "=",
+            "10"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "MouseDistanceCheck",
+            "=",
+            "MouseX()",
+            "=",
+            "MouseY()"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "RotateTowardPosition"
+          },
+          "parameters": [
+            "ControllerCenter",
+            "MouseX()",
+            "MouseY()",
+            "0",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "ControllerSpeed",
+            "=",
+            "ControllerCenter.Distance(ControllerPosition)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "AddForceAL"
+          },
+          "parameters": [
+            "Player",
+            "Variable(ControllerAngle)",
+            "Variable(ControllerSpeed)*5",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "RotateTowardAngle"
+          },
+          "parameters": [
+            "Player",
+            "Variable(ControllerAngle)",
+            "600",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     },
     {
       "disabled": false,
@@ -118,7 +473,7 @@
         {
           "type": {
             "inverted": false,
-            "value": "KeyPressed"
+            "value": "SourisBouton"
           },
           "parameters": [
             "",
@@ -131,120 +486,77 @@
         {
           "type": {
             "inverted": false,
-            "value": "AddForceAL"
+            "value": "MettreXY"
           },
           "parameters": [
-            "Player",
-            "180",
-            "100",
-            ""
+            "ControllerPosition",
+            "=",
+            "MouseX()",
+            "=",
+            "MouseY()"
           ],
           "subInstructions": []
         }
       ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "events": [
         {
-          "type": {
-            "inverted": false,
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "Up"
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Distance"
+              },
+              "parameters": [
+                "ControllerPosition",
+                "ControllerCenter",
+                "60",
+                ""
+              ],
+              "subInstructions": []
+            }
           ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "ControllerPosition",
+                "ControllerCenter",
+                "60",
+                "ControllerCenter.Angle()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
-          "type": {
-            "inverted": false,
-            "value": "AddForceAL"
-          },
-          "parameters": [
-            "Player",
-            "270",
-            "100",
-            ""
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ControllerAngle",
+                "=",
+                "ControllerCenter.Angle()"
+              ],
+              "subInstructions": []
+            }
           ],
-          "subInstructions": []
+          "events": []
         }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "Right"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "AddForceAL"
-          },
-          "parameters": [
-            "Player",
-            "0",
-            "100",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "Down"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "AddForceAL"
-          },
-          "parameters": [
-            "Player",
-            "90",
-            "100",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
+      ]
     }
   ],
   "layers": [
@@ -268,6 +580,17 @@
           "width": 0
         }
       ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 1702453580,
+      "ambientLightColorG": 8425424,
+      "ambientLightColorR": 2,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "UI",
+      "visibility": true,
+      "cameras": [],
       "effects": []
     }
   ],
