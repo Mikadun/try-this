@@ -1,8 +1,8 @@
 {
   "b": 27,
   "disableInputWhenNotFocused": true,
-  "mangledName": "LevelExplorer",
-  "name": "LevelExplorer",
+  "mangledName": "LevelChip",
+  "name": "LevelChip",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -22,52 +22,23 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.37
+    "zoomFactor": 0.544
   },
   "objectsGroups": [],
-  "variables": [
-    {
-      "name": "ControllerAngle",
-      "value": ""
-    },
-    {
-      "name": "ControllerSpeed",
-      "value": ""
-    },
-    {
-      "name": "TouchInOut",
-      "value": "0"
-    }
-  ],
+  "variables": [],
   "instances": [
     {
       "angle": 0,
       "customSize": true,
       "height": 30,
-      "layer": "Player",
+      "layer": "",
       "locked": false,
       "name": "Player",
-      "persistentUuid": "93fc80e0-61fb-4d62-9f0b-74bab3d6ae2c",
+      "persistentUuid": "8ee4bec4-54a2-430f-8daa-7b51ba0fdbab",
       "width": 30,
-      "x": 488,
-      "y": 288,
+      "x": 640,
+      "y": 360,
       "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "UI",
-      "locked": false,
-      "name": "ControllerCenter",
-      "persistentUuid": "cc038e71-bcf0-4d25-876d-aeb5cef6403f",
-      "width": 0,
-      "x": 186,
-      "y": 570,
-      "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -79,11 +50,27 @@
       "layer": "",
       "locked": false,
       "name": "Life",
-      "persistentUuid": "e7059837-b43d-4b97-8b73-84b655ddd5ba",
+      "persistentUuid": "e0ce13b1-0763-4a31-9ffe-8448a912617c",
       "width": 171,
       "x": 15,
       "y": 13,
-      "zOrder": 6,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "ControllerCenter",
+      "persistentUuid": "ca25be48-de6f-4e47-b872-0b881750e450",
+      "width": 0,
+      "x": 186,
+      "y": 570,
+      "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -96,40 +83,15 @@
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
-      "behaviors": [
-        {
-          "name": "Flash",
-          "type": "Flash::Flash",
-          "HalfPeriodTime": 0.1,
-          "IsFlashing": false,
-          "FlashDuration": 0
-        },
-        {
-          "name": "Health",
-          "type": "Health::Health",
-          "Health": 3,
-          "DamageCooldown": 1.5,
-          "MaxHealth": 3,
-          "IsJustDamaged": false,
-          "CooldownActive": false
-        },
-        {
-          "name": "StayOnScreen",
-          "type": "StayOnScreen::StayOnScreen",
-          "MarginTop": 0,
-          "MarginBottom": 30,
-          "MarginLeft": 0,
-          "MarginRight": 30
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
-          "name": "PlayerIdle",
+          "name": "",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.1,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
@@ -167,8 +129,8 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
+              "looping": false,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
@@ -176,8 +138,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 80,
-                    "y": 80
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -211,8 +173,8 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
-              "timeBetweenFrames": 0.025,
+              "looping": false,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
@@ -220,8 +182,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 80,
-                    "y": 80
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -246,7 +208,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "NewObject",
+          "name": "",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -259,8 +221,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 32,
-                    "y": 32
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -285,7 +247,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "NewObject",
+          "name": "",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -479,7 +441,7 @@
           ]
         },
         {
-          "name": "Circle",
+          "name": "Bullet",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1382,43 +1344,9 @@
         }
       ],
       "effects": []
-    },
-    {
-      "ambientLightColorB": 1702453632,
-      "ambientLightColorG": 0,
-      "ambientLightColorR": 0,
-      "followBaseLayerCamera": false,
-      "isLightingLayer": false,
-      "name": "Player",
-      "visibility": true,
-      "cameras": [],
-      "effects": []
-    },
-    {
-      "ambientLightColorB": 1702453632,
-      "ambientLightColorG": 8425424,
-      "ambientLightColorR": 2,
-      "followBaseLayerCamera": false,
-      "isLightingLayer": false,
-      "name": "UI",
-      "visibility": true,
-      "cameras": [],
-      "effects": []
     }
   ],
   "behaviorsSharedData": [
-    {
-      "name": "Flash",
-      "type": "Flash::Flash"
-    },
-    {
-      "name": "Health",
-      "type": "Health::Health"
-    },
-    {
-      "name": "StayOnScreen",
-      "type": "StayOnScreen::StayOnScreen"
-    },
     {
       "name": "Tween",
       "type": "Tween::TweenBehavior"
