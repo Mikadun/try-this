@@ -532,7 +532,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Stick",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -661,6 +661,20 @@
               },
               "parameters": [
                 "MouseDistanceCheck"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "tracks\\Track1.ogg",
+                "",
+                "100",
+                ""
               ],
               "subInstructions": []
             }
@@ -1174,8 +1188,7 @@
     {
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Enemies",
+      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
@@ -1358,6 +1371,33 @@
         }
       ],
       "events": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Level Design",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "1-st stage",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        }
+      ],
+      "parameters": []
     }
   ],
   "layers": [

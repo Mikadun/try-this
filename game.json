@@ -257,6 +257,13 @@
         "name": "images\\EnemyBullet.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "tracks/Track1.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "tracks\\Track1.ogg",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
