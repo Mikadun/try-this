@@ -202,6 +202,58 @@
         "metadata": "",
         "name": "tracks\\chip.ogg",
         "userAdded": true
+      },
+      {
+        "file": "tracks/Track1.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "tracks\\Track1.ogg",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "StartBtn-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "StartBtn-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/StartBtn-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\StartBtn-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/StartBtn-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\StartBtn-1-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/EnemyCircle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\EnemyCircle.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/StartBtn-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\StartBtn-1-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -210,6 +262,10 @@
   "objectsGroups": [],
   "variables": [],
   "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/main-menu"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/levelexplorer"
