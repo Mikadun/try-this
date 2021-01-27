@@ -532,7 +532,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Stick",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
