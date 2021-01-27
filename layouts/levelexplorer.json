@@ -88,7 +88,7 @@
       "angle": 0,
       "customSize": true,
       "height": 61,
-      "layer": "",
+      "layer": "UI",
       "locked": false,
       "name": "Life",
       "persistentUuid": "e7059837-b43d-4b97-8b73-84b655ddd5ba",
@@ -1351,6 +1351,18 @@
           "parameters": [
             "Life",
             "\"Life0\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"Main menu\"",
+            "yes"
           ],
           "subInstructions": []
         }
