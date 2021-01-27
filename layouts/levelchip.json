@@ -3499,18 +3499,6 @@
             "\"Life0\""
           ],
           "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "Scene"
-          },
-          "parameters": [
-            "",
-            "\"Main menu\"",
-            "yes"
-          ],
-          "subInstructions": []
         }
       ],
       "events": []
