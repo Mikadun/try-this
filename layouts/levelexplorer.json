@@ -22,18 +22,9 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.804
+    "zoomFactor": 0.226
   },
-  "objectsGroups": [
-    {
-      "name": "Enemies",
-      "objects": [
-        {
-          "name": "EnemySquare"
-        }
-      ]
-    }
-  ],
+  "objectsGroups": [],
   "variables": [
     {
       "name": "ControllerAngle",
@@ -77,22 +68,6 @@
       "x": 186,
       "y": 570,
       "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "EnemySquare",
-      "persistentUuid": "4ac66b80-3fd3-48f8-9846-ec2dcc2770ac",
-      "width": 0,
-      "x": 767,
-      "y": 252,
-      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -341,16 +316,6 @@
       ]
     },
     {
-      "height": 100,
-      "name": "EnemySquare",
-      "tags": "",
-      "texture": "images\\EnemySquare.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 100,
-      "variables": [],
-      "behaviors": []
-    },
-    {
       "name": "Life",
       "tags": "",
       "type": "Sprite",
@@ -456,6 +421,74 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "images\\lives0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Enemy",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Square",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "images\\EnemySquare.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Circle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "images\\EnemyBullet.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1104,7 +1137,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Collisions",
+      "comment": "Enemies",
       "comment2": ""
     },
     {
@@ -1115,10 +1148,42 @@
         {
           "type": {
             "inverted": false,
-            "value": "CollisionNP"
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
           },
           "parameters": [
             "Enemies",
+            "\"EnemiesTimer\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Enemies",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Enemy",
             "Player",
             "",
             "",
@@ -1138,6 +1203,62 @@
             "Health",
             "1",
             ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Timer"
+          },
+          "parameters": [
+            "EnemySquare",
+            "2",
+            "\"EnemiesTimer\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy",
+            "100",
+            "200",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Enemy",
+            "=",
+            "1"
           ],
           "subInstructions": []
         }
@@ -1263,7 +1384,7 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 1702453580,
+      "ambientLightColorB": 1702453632,
       "ambientLightColorG": 0,
       "ambientLightColorR": 0,
       "followBaseLayerCamera": false,
