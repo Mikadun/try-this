@@ -419,7 +419,7 @@
               },
               "parameters": [
                 "",
-                "\"LevelExplorer\"",
+                "\"LevelChip\"",
                 ""
               ],
               "subInstructions": []
@@ -664,7 +664,7 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 1702453580,
+      "ambientLightColorB": 1702453632,
       "ambientLightColorG": 0,
       "ambientLightColorR": 1,
       "followBaseLayerCamera": false,
@@ -675,8 +675,8 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 1702453580,
-      "ambientLightColorG": 1953789250,
+      "ambientLightColorB": 1702453632,
+      "ambientLightColorG": 1953789312,
       "ambientLightColorR": 1,
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
